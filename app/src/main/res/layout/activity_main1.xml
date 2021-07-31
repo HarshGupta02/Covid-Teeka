@@ -7,7 +7,6 @@
     tools:context=".MainActivity"
     android:background="@drawable/pink_gradient">
 
-    <!--edit text for entering the pin code-->
     <EditText
         android:id="@+id/idEdtPinCode"
         android:layout_width="match_parent"
@@ -18,7 +17,6 @@
         android:hint="Enter PinCode"
         android:inputType="number" />
 
-    <!--button for searchng the data-->
     <Button
         android:id="@+id/idBtnSearch"
         android:layout_width="wrap_content"
@@ -30,7 +28,6 @@
         android:text="Search"
         android:textAllCaps="false" />
 
-    <!--progress bar for loading indicator-->
     <ProgressBar
         android:id="@+id/idPBLoading"
         android:layout_width="wrap_content"
@@ -38,7 +35,6 @@
         android:layout_centerInParent="true"
         android:visibility="gone" />
 
-    <!--recycler view for displaying results in the form of list-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/centersRV"
         android:layout_width="match_parent"

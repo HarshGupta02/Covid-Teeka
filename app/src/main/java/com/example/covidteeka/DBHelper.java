@@ -17,7 +17,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase MyDB) {
-        MyDB.execSQL("create Table users (adharno TEXT primary key ,username TEXT, pincode TEXT, password TEXT)"); //edit here
+        MyDB.execSQL("create Table users (adharno TEXT primary key ,username TEXT, pincode TEXT, password TEXT)");
     }
 
     @Override
@@ -25,12 +25,12 @@ public class DBHelper extends SQLiteOpenHelper {
         MyDB.execSQL("drop Table if exists users");
     }
 
-    public Boolean insertData(String username, String pincode, String adharno, String password){ //edit here
+    public Boolean insertData(String username, String pincode, String adharno, String password){
         SQLiteDatabase MyDB=this.getWritableDatabase();
         ContentValues contentValues=new ContentValues();
         contentValues.put("username",username);
-        contentValues.put("pincode",pincode); //edit
-        contentValues.put("adharno",adharno); //edit
+        contentValues.put("pincode",pincode); 
+        contentValues.put("adharno",adharno); 
         contentValues.put("password",password);
         long result =MyDB.insert("users",null,contentValues);
         if(result==-1) return false;
@@ -38,7 +38,7 @@ public class DBHelper extends SQLiteOpenHelper {
             return true;
     }
 
-    public Boolean checkadharno(String adharno){ //edited whole function maybe because its the primary key function, check again, not sure
+    public Boolean checkadharno(String adharno){
         SQLiteDatabase MyDB=this.getWritableDatabase();
         Cursor cursor=MyDB.rawQuery("Select * from users where adharno = ?",new String[]{adharno});
         if(cursor.getCount()>0)
@@ -47,9 +47,9 @@ public class DBHelper extends SQLiteOpenHelper {
             return false;
     }
 
-    public Boolean checkusernamepasswordadhar(String username,String password, String adharno){ //edit here
+    public Boolean checkusernamepasswordadhar(String username,String password, String adharno){
         SQLiteDatabase MyDB=this.getWritableDatabase();
-        Cursor cursor=MyDB.rawQuery("Select * from users where username=? and password = ? and adharno = ?",new String[]{username,password,adharno});// edit here
+        Cursor cursor=MyDB.rawQuery("Select * from users where username=? and password = ? and adharno = ?",new String[]{username,password,adharno});
         if(cursor.getCount()>0)
             return true;
         else

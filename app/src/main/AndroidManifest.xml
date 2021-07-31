@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.COVIDTeeka">
         <activity android:name=".MainActivity2"></activity>
-        <!-- <activity android:name=".HomeScreen"></activity> -->
         <activity android:name=".CovidMainActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">

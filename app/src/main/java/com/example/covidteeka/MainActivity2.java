@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    EditText username,password,repassword,pincode,adharno; //change done here
+    EditText username,password,repassword,pincode,adharno;
     Button signup,signin;
     DBHelper DB;
 
@@ -18,15 +18,11 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-
-//        Intent intent= new Intent(this,HomeScreen.class);
-//        startActivity(intent);
-
         username=(EditText)findViewById(R.id.username);
         password=(EditText)findViewById(R.id.password);
         repassword=(EditText)findViewById(R.id.repassword);
-        pincode = (EditText)findViewById(R.id.pincode); //extra addition
-        adharno=(EditText)findViewById(R.id.adharno); //extra addition
+        pincode = (EditText)findViewById(R.id.pincode);
+        adharno=(EditText)findViewById(R.id.adharno);
         signup=(Button) findViewById(R.id.btnsignup);
         signin=(Button) findViewById(R.id.btnsignin);
         DB =new DBHelper(this);
@@ -35,22 +31,20 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 String user=username.getText().toString();
-                String pin=pincode.getText().toString(); //edit here
-                String adhar=adharno.getText().toString(); //edit here
+                String pin=pincode.getText().toString();
+                String adhar=adharno.getText().toString();
                 String pass=password.getText().toString();
                 String repass=repassword.getText().toString();
 
-                if(user.equals("")|| pass.equals("")|| repass.equals("")|| pin.equals("")|| adhar.equals(""))// edit here
+                if(user.equals("")|| pass.equals("")|| repass.equals("")|| pin.equals("")|| adhar.equals(""))
                     Toast.makeText(MainActivity2.this,"please enter all the fields",Toast.LENGTH_SHORT).show();
                 else{
                     if(pass.equals(repass)){
-                        Boolean checkuser=DB.checkadharno(adhar);//edit here checking adhar, primary key function wala in dbhelpr
+                        Boolean checkuser=DB.checkadharno(adhar);
                         if(checkuser==false) {
-                            Boolean insert = DB.insertData(user, pin, adhar, pass);//edit here, ithink this edit is wrong, chrck again
+                            Boolean insert = DB.insertData(user, pin, adhar, pass);
                             if (insert==true){
-                                Toast.makeText(MainActivity2.this,"Registered successfully",Toast.LENGTH_SHORT).show();
-//                                Intent intent =new Intent(getApplicationContext(),CovidMainActivity.class);
-//                                startActivity(intent);
+                                Toast.makeText(MainActivity2.this,"Registered successfully",Toast.LENGTH_SHORT).show();                         
                             }
                             else{
                                 Toast.makeText(MainActivity2.this,"Registeration failed",Toast.LENGTH_SHORT).show();
