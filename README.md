@@ -12,4 +12,8 @@ Takes the pincode of the user where the user is residing and takes the data on w
 
 ScreenShots :
 
+![WhatsApp Image 2023-08-06 at 12 04 38 PM](https://github.com/HarshGupta02/Covid-Teeka/assets/77138269/5db86051-f53d-4a52-b7f6-d4b83fffcfa3)
+
+![WhatsApp Image 2023-08-06 at 12 04 37 PM](https://github.com/HarshGupta02/Covid-Teeka/assets/77138269/bddb5b2c-d88d-4f6c-846b-98210864b29f)
+
 ![Screenshot (801)](https://github.com/HarshGupta02/Covid-Teeka/assets/77138269/382379a0-dae7-44e1-8c8c-8de4d7d37945)
