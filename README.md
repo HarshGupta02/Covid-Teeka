@@ -1,4 +1,4 @@
-Covid Teeka
+#Covid Teeka
 The government of India has started the biggest vaccination drive across India to give vaccination to people to fight against the COVID-19 virus. As there are so many vaccination centers in India for vaccination so to check the availability of different vaccination in different centers across India. Hence we build a simple application for getting the details about vaccination centers in India.
 
 API Reference
